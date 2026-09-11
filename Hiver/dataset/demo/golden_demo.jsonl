@@ -1,0 +1,5 @@
+{"customer_text":"My pickup driver cancelled again","intent":"trip_status","automation_label":"auto_handle","judge_human":"pass"}
+{"customer_text":"Why did I get charged a higher fare?","intent":"fare_or_charge","automation_label":"auto_handle","judge_human":"pass"}
+{"customer_text":"My discount promo code failed","intent":"promotion","automation_label":"auto_handle","judge_human":"pass"}
+{"customer_text":"Someone threatened me during the ride","intent":"safety","automation_label":"escalate","judge_human":"pass"}
+{"customer_text":"I forgot my password and cannot login","intent":"account_access","automation_label":"escalate","judge_human":"pass"}

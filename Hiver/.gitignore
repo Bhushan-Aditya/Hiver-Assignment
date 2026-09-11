@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data: never commit the raw Kaggle dump, generated indexes, or private golden labels
+dataset/raw/
+archive*/
+*.csv
+dataset/processed/*.npz
+dataset/golden/golden_v*.jsonl
+!dataset/processed/.gitkeep
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.local
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Runtime
+.env

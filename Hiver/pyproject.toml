@@ -1,0 +1,37 @@
+[project]
+name = "hiver-support-agent"
+version = "1.0.0"
+description = "Evidence-first local RAG support-triage agent for Uber Support"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+]
+
+[project.optional-dependencies]
+dev = ["httpx>=0.27", "ruff>=0.4"]
+
+[project.scripts]
+hiver = "hiver_agent.cli:main"
+hiver-serve = "hiver_agent.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["hiver_agent"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+# The pre-existing modules use a deliberately terse one-statement-per-line style.
+# Lint for real defects (pyflakes: undefined names, unused imports, bad f-strings)
+# and syntax errors, not for that style choice.
+select = ["E9", "F"]
+
+[tool.unittest]
+start-directory = "tests"
